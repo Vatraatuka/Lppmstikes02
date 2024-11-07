@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil - KULIAH PAKAR</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      /* Latar belakang video */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Video latar belakang */
+      video.background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1; /* Pastikan video ada di belakang konten */
+      }
+
+      /* Menu Styling */
+      .w3-bar {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Posisikan menu di tengah layar */
+        z-index: 1000;
+        display: flex;
+        flex-direction: column; /* Menu vertikal */
+        justify-content: center; /* Menu ada di tengah secara vertikal */
+        align-items: center; /* Menu ada di tengah secara horizontal */
+        background-color: rgba(0, 77, 122, 0.9);
+        padding: 15px 0;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: auto;
+      }
+
+      .w3-bar-item {
+        color: white;
+        padding: 12px 20px;
+        font-size: 18px;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column; /* Ikon dan teks vertikal */
+        align-items: center; /* Menjaga ikon dan teks di tengah */
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      .w3-bar-item i {
+        margin-bottom: 8px; /* Memberi jarak antara ikon dan teks */
+      }
+
+      .w3-bar-item:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: scale(1.1);
+      }
+
+      /* Konten Profil Pengguna */
+      .container {
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: 100px auto;
+        text-align: center;
+        z-index: 1; /* Agar konten berada di atas video */
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.7); /* Latar belakang untuk profil */
+        color: white;
+      }
+
+      h1 {
+        color: hsl(270, 14%, 91%);
+        margin-bottom: 20px;
+        font-size: 2em;
+      }
+
+      .profile-photo {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        margin-bottom: 30px;
+        object-fit: cover;
+      }
+
+      .profile-info {
+        font-size: 1em;
+        text-align: left;
+        margin-top: 20px;
+      }
+
+      .profile-info p {
+        margin: 5px 0;
+      }
+
+      /* Media query untuk tampilan ponsel */
+      @media (max-width: 768px) {
+        /* Menu horizontal pada perangkat mobile */
+        .w3-bar {
+          flex-direction: row;
+          position: static; /* Ubah posisi menu agar tetap di atas halaman */
+          width: 100%;
+          transform: none;
+          margin: 0;
+          justify-content: space-around;
+        }
+
+        .w3-bar-item {
+          font-size: 16px;
+          padding: 10px 15px;
+        }
+
+        /* Konten Profil */
+        .container {
+          margin: 20px auto;
+          padding: 15px;
+          max-width: 90%;
+        }
+
+        .profile-photo {
+          width: 150px;
+          height: 150px;
+        }
+
+        h1 {
+          font-size: 1.6em;
+        }
+
+        .profile-info {
+          font-size: 0.9em;
+        }
+      }
+    </style>
+  </head>
+  <body class="w3-theme-l5">
+    <!-- Video Background -->
+    <video class="background-video" autoplay loop muted>
+      <source
+        src="Telematika Dalam Kejadian Fraud di Rumah Sakit.mp4"
+        type="video/mp4"
+      />
+      Browser Anda tidak mendukung elemen video.
+    </video>
+
+    <!-- Menu -->
+    <div class="w3-bar">
+      <a href="dashboard.html" class="w3-bar-item w3-button w3-padding-large">
+        <i class="fa fa-home w3-margin-right"></i> HOME
+      </a>
+      <a
+        href="Lokasi.html"
+        class="w3-bar-item w3-button w3-padding-large"
+        title="Lokasi"
+      >
+        <i class="fa fa-globe"></i> Lokasi
+      </a>
+      <a
+        href="Profil.html"
+        class="w3-bar-item w3-button w3-padding-large"
+        title="Profil"
+      >
+        <i class="fa fa-user"></i> Profil
+      </a>
+      <a
+        href="PromosiKampus.html"
+        class="w3-bar-item w3-button w3-padding-large"
+        title="Promosi Kampus"
+      >
+        <i class="fa fa-bullhorn"></i> Promosi Kampus
+      </a>
+      <a
+        href="logout.html"
+        class="w3-bar-item w3-button w3-padding-large"
+        title="Logout"
+      >
+        <i class="fa fa-sign-out"></i> Logout
+      </a>
+    </div>
+
+    <!-- Konten Profil Pengguna -->
+    <main>
+      <div class="container">
+        <h1>Profil Pengguna</h1>
+        <img src="logo lppm.jpg" alt="Foto Profil" class="profile-photo" />
+        <div class="profile-info">
+          <p><strong>Nama:</strong> LPPM Stikes Bakti Nusantara Gorontalo</p>
+          <p><strong>Email:</strong> stikesbaktara@gmail.com</p>
+          <p><strong>No. Telepon:</strong> 081234567890</p>
+          <p>
+            <strong>Alamat:</strong> Jln. Otanaha Putra, Desa. Luhu, Kec.
+            Telaga, Kab. Gorontalo
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
